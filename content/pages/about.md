@@ -4,10 +4,33 @@ template: "page"
 socialImage: "/media/image-2.jpg"
 ---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+## Jieun
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
+I ❤️ being a professional software engineer (and traveling)
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
+[\*https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8405631](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8405631) (Being a Software Developer)
 
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+[\*https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8938103](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8938103) (Being a Software Developer)
+![bridge](media/bridge.jpg)
+
+## Side Projects
+
+#### Yogurt Studio
+
+_CRM solution for Pilates center_
+<br />Front end - React Native, Vue.js(team)
+<br />Back end - Java Spring Boot (team)
+
+#### PLACES
+
+_One-time Chatting Platform_
+
+## Work Experience
+
+work as an software engineer since 2018
+
+## Skills
+
+Windows programming (Desktop - C#, C++)
+<br />Web Front (react.js)
+<br />Server programming (C#, node.js)
