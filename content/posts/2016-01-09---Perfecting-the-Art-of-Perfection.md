@@ -61,6 +61,6 @@ jieun.dev 를 추가하고 아래 경고 메시지가 보였다.
 ## **Reference**
 
 - https://docs.netlify.com/domains-https/netlify-dns/delegate-to-netlify/ (Delegate Domain to Netlify)
-- https://docs.netlify.com/domains-https/custom-domains/#definitions (Grossary)
+- https://docs.netlify.com/domains-https/custom-domains/#definitions (Glossary)
 - https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/
 - https://www.regyu.dev/etc/start-gatsby-for-blog/
