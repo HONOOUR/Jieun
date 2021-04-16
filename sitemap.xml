@@ -4,11 +4,11 @@
 <url> <loc>https://jieun.dev/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/posts/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/posts/the-origins-of-social-stationery-lettering</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jieun.dev/posts/the-birth-of-movable-type</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/posts/a-brief-history-of-typography</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/posts/humane-typography-in-the-digital-age</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/pages/contacts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jieun.dev/posts/the-birth-of-movable-type</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/tag/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/tag/design</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/tag/gatsby</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
