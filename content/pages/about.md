@@ -11,7 +11,7 @@ I ❤️ being a professional software engineer (and traveling)
 [\*https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8405631](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8405631) (Being a Software Developer)
 
 [\*https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8938103](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8938103) (Being a Software Developer)
-![bridge](media/bridge.jpg)
+![bridge](/media/bridge.jpg)
 
 ## Side Projects
 
