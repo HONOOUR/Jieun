@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Jieun]]></title><description><![CDATA[I ❤️ being a software engineer]]></description><link>https://jieun.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 17 Apr 2021 14:34:24 GMT</lastBuildDate><item><title><![CDATA[Node.js - Long Polling]]></title><description><![CDATA[long polling for server-client communication]]></description><link>https://jieun.dev/posts/the-origins-of-social-stationery-lettering</link><guid isPermaLink="false">https://jieun.dev/posts/the-origins-of-social-stationery-lettering</guid><pubDate>Fri, 16 Apr 2021 22:50:37 GMT</pubDate><content:encoded>&lt;p&gt;Eloquent JS - CH21 Project: Skill-Sharing Website
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Jieun]]></title><description><![CDATA[I ❤️ being a software engineer]]></description><link>https://jieun.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 18 Apr 2021 15:40:17 GMT</lastBuildDate><item><title><![CDATA[Greedy Algorithm]]></title><description><![CDATA[Greedy Algorithm with python]]></description><link>https://jieun.dev/posts/a-brief-history-of-typography</link><guid isPermaLink="false">https://jieun.dev/posts/a-brief-history-of-typography</guid><pubDate>Sat, 17 Apr 2021 22:40:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;greedy-algorithm&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#greedy-algorithm&quot; aria-label=&quot;greedy algorithm permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Greedy Algorithm&lt;/h1&gt;
+&lt;p&gt;휴리스틱 문제 해결 알고리즘(&lt;a href=&quot;https://ko.wikipedia.org/wiki/%ED%9C%B4%EB%A6%AC%EC%8A%A4%ED%8B%B1_%EC%9D%B4%EB%A1%A0&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://ko.wikipedia.org/wiki/휴리스틱_이론&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;합리적인 판단을 할 수 없는 경우 용이하게 구성된 간편추론 방법&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;앞선 선택을 다시 고려하지 않음&lt;/li&gt;
+&lt;li&gt;부분 문제에 대한 최적 해결 방법 → 문제 해결 방법&lt;/li&gt;
+&lt;li&gt;최적에 가까운 답, 그러나 반드시 최적해는 아님&lt;/li&gt;
+&lt;li&gt;-&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Examples: Dijkstra, Huffman Coding, Decision Tree, UD3&lt;/p&gt;
+&lt;h2 id=&quot;compare-to-dynamic-algorithm&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#compare-to-dynamic-algorithm&quot; aria-label=&quot;compare to dynamic algorithm permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Compare to Dynamic Algorithm&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Dynamic Algorithm&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;하위 문제에 대한 최적 솔루션 찾아 → 전역 최적 솔루션 선택&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Greedy Algorithm&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;각 단계마다 로컬 최적해를 찾아 문제의 크기 작게 줄여나감&lt;/p&gt;
+&lt;p&gt;가장큰 합, 동전 바꾸기 문제를 풀 수 없음&lt;/p&gt;
+&lt;h2 id=&quot;knapsack-problem&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#knapsack-problem&quot; aria-label=&quot;knapsack problem permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Knapsack Problem&lt;/h2&gt;
+&lt;br /&gt;
+&lt;h2 id=&quot;queue-reconstruction-by-height&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#queue-reconstruction-by-height&quot; aria-label=&quot;queue reconstruction by height permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Queue Reconstruction by height&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/queue-reconstruction-by-height/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://leetcode.com/problems/queue-reconstruction-by-height/&lt;/a&gt;
+&lt;a href=&quot;https://github.com/HONOOUR/Algorithm_Test/blob/main/Algorithm_Python/QueueReconstructionByHeight.py&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/HONOOUR/Algorithm_Test/blob/main/Algorithm_Python/QueueReconstructionByHeight.py&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Sort people by height in decreasing order&lt;/p&gt;
+&lt;p&gt;use max heap by adding minus&lt;/p&gt;
+&lt;p&gt;maxheap = [[-7, 0], [-6, 1], [-7, 1], [-4, 4], [-5, 0], [-5, 2]]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use index to push the person into an array(result)&lt;/p&gt;
+&lt;p&gt;person[high, index]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pop person(from maxheap) and push into the new array - use index - [7,0] - [7,0] [7,1] - [7,0] &lt;strong&gt;[6.1]&lt;/strong&gt; [7,1] ← 6 with index 1 - [**5,0]** [7,0] [6.1] [7,1] ← 5 with index 0&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    it does not harm the array in the past. The people in the array were taller than 5. Index only affects when the rest are taller.
+
+- [**5,0]** [7,0] [5,2] [6.1] [7,1] ← 5 with index 2
+- [**5,0]** [7,0] [5,2] [6.1] [4,4] [7,1] ← 4 with index 4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;task-scheduler&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#task-scheduler&quot; aria-label=&quot;task scheduler permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Task Scheduler&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/task-scheduler/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://leetcode.com/problems/task-scheduler/&lt;/a&gt;
+&lt;a href=&quot;https://github.com/HONOOUR/Algorithm_Test/blob/main/Algorithm_Python/TaskScheduler.py&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/HONOOUR/Algorithm_Test/blob/main/Algorithm_Python/TaskScheduler.py&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a dic of word occurrence (counter)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sort tasks with their occurrence (the n most common tasks)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;counter&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;most_common&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# consider idle time&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;while True until the counter is empty&lt;/p&gt;
+&lt;p&gt;add 1 to result and subtract 1 from the task’s value&lt;/p&gt;
+&lt;p&gt;if the n most common is 1 less than n+1, add 1 to result for idle time&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Counter object&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;for occurrences of words in a list&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;most_common(n)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;return a list of the n most common elements&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;count &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Counter&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; word &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; word_array&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    count&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;word&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Node.js - Long Polling]]></title><description><![CDATA[long polling for server-client communication]]></description><link>https://jieun.dev/posts/the-origins-of-social-stationery-lettering</link><guid isPermaLink="false">https://jieun.dev/posts/the-origins-of-social-stationery-lettering</guid><pubDate>Fri, 16 Apr 2021 22:50:37 GMT</pubDate><content:encoded>&lt;p&gt;Eloquent JS - CH21 Project: Skill-Sharing Website
 &lt;a href=&quot;https://eloquentjavascript.net/21_skillsharing.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://eloquentjavascript.net/21_skillsharing.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;문제: Server can not open connection to Client
 &lt;br /&gt;해결: long polling for server-client communication&lt;/p&gt;
@@ -451,76 +512,4 @@
 &lt;p&gt;Thus, they feel that “the decisive factor for the birth of typography”, the use of reusable moulds for casting type, might have been a more progressive process than was previously thought. They suggest that the additional step of using the punch to create a mould that could be reused many times was not taken until twenty years later, in the 1470s. Others have not accepted some or all of their suggestions, and have interpreted the evidence in other ways, and the truth of the matter remains very uncertain.&lt;/p&gt;
 &lt;p&gt;A 1568 history by Hadrianus Junius of Holland claims that the basic idea of the movable type came to Gutenberg from Laurens Janszoon Coster via Fust, who was apprenticed to Coster in the 1430s and may have brought some of his equipment from Haarlem to Mainz. While Coster appears to have experimented with moulds and castable metal type, there is no evidence that he had actually printed anything with this technology. He was an inventor and a goldsmith. However, there is one indirect supporter of the claim that Coster might be the inventor. The author of the Cologne Chronicle of 1499 quotes Ulrich Zell, the first printer of Cologne, that printing was performed in Mainz in 1450, but that some type of printing of lower quality had previously occurred in the Netherlands. However, the chronicle does not mention the name of Coster, while it actually credits Gutenberg as the “first inventor of printing” in the very same passage (fol. 312). The first securely dated book by Dutch printers is from 1471, and the Coster connection is today regarded as a mere legend.&lt;/p&gt;
 &lt;p&gt;The 19th century printer and typefounder Fournier Le Jeune suggested that Gutenberg might not have been using type cast with a reusable matrix, but possibly wooden types that were carved individually. A similar suggestion was made by Nash in 2004. This remains possible, albeit entirely unproven.&lt;/p&gt;
-&lt;p&gt;It has also been questioned whether Gutenberg used movable types at all. In 2004, Italian professor Bruno Fabbiani claimed that examination of the 42-line Bible revealed an overlapping of letters, suggesting that Gutenberg did not in fact use movable type (individual cast characters) but rather used whole plates made from a system somewhat like a modern typewriter, whereby the letters were stamped successively into the plate and then printed. However, most specialists regard the occasional overlapping of type as caused by paper movement over pieces of type of slightly unequal height.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A Brief History of Typography]]></title><description><![CDATA[Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.]]></description><link>https://jieun.dev/posts/a-brief-history-of-typography</link><guid isPermaLink="false">https://jieun.dev/posts/a-brief-history-of-typography</guid><pubDate>Tue, 02 Feb 2016 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. &lt;/p&gt;
-&lt;p&gt;Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.  &lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/d9c39/image-0.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAE/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgED/9oADAMBAAIQAxAAAAFYTebWei//xAAcEAABAwUAAAAAAAAAAAAAAAABAAIhAxESMkH/2gAIAQEAAQUCBQkPxvKp6d//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAARAhYXH/2gAIAQEABj8CmhaPp//EABwQAQADAQADAQAAAAAAAAAAAAEAESExQWFxkf/aAAgBAQABPyG2s3zDlwtPso2l+4urVTU7nen9iDmYif/aAAwDAQACAAMAAAAQVy//xAAWEQADAAAAAAAAAAAAAAAAAAAAASH/2gAIAQMBAT8QShD/xAAWEQADAAAAAAAAAAAAAAAAAAAAASH/2gAIAQIBAT8QbpT/xAAdEAEAAgIDAQEAAAAAAAAAAAABABEhMUFRYXGR/9oACAEBAAE/EBqFjmHHCQKTXget+R0cJnJjlDcKlul/L4gKW10tG7HcIO4FdP2f/9k=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/8ac56/image-0.webp 240w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/d3be9/image-0.webp 480w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/e46b2/image-0.webp 960w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/f992d/image-0.webp 1440w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/62ed8/image-0.webp 1800w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/09b79/image-0.jpg 240w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/7cc5e/image-0.jpg 480w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/6a068/image-0.jpg 960w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/644c5/image-0.jpg 1440w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/d9c39/image-0.jpg 1800w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/jpeg&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/6a068/image-0.jpg&quot;
-            alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
-            title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;header-level-2&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#header-level-2&quot; aria-label=&quot;header level 2 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Header Level 2&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. &lt;/p&gt;
-&lt;figure&gt;
-	&lt;blockquote&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.&lt;/p&gt;
-		&lt;footer&gt;
-			&lt;cite&gt;— Aliquam tincidunt mauris eu risus.&lt;/cite&gt;
-		&lt;/footer&gt;
-	&lt;/blockquote&gt;
-&lt;/figure&gt;
-&lt;h3 id=&quot;header-level-3&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#header-level-3&quot; aria-label=&quot;header level 3 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Header Level 3&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;#header h1 a&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 300px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 80px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;It has also been questioned whether Gutenberg used movable types at all. In 2004, Italian professor Bruno Fabbiani claimed that examination of the 42-line Bible revealed an overlapping of letters, suggesting that Gutenberg did not in fact use movable type (individual cast characters) but rather used whole plates made from a system somewhat like a modern typewriter, whereby the letters were stamped successively into the plate and then printed. However, most specialists regard the occasional overlapping of type as caused by paper movement over pieces of type of slightly unequal height.&lt;/p&gt;</content:encoded></item></channel></rss>
