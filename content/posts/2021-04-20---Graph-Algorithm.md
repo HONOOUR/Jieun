@@ -11,6 +11,7 @@ tags:
   - "DFS"
   - "BFS"
 description: Graph
+socialImage: ""
 ---
 
 ### Graphs

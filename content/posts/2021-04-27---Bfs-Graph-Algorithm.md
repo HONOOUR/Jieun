@@ -11,6 +11,7 @@ tags:
   - "BFS"
   - "Python"
 description: BFS with python"
+socialImage: ""
 ---
 
 ## Graph Search
