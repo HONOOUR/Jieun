@@ -3,9 +3,11 @@
 <url> <loc>https://jieun.dev/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/posts/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jieun.dev/posts/a-brief-history-of-typography</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jieun.dev/posts/the-origins-of-social-stationery-lettering</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jieun.dev/posts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jieun.dev/posts/long-polling</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jieun.dev/posts/greedy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jieun.dev/posts/dvide-and-conquer</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jieun.dev/posts/graph</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jieun.dev/posts/bfs</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/pages/contacts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jieun.dev/tag/algorithm</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
