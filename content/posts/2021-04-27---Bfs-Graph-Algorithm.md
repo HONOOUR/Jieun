@@ -3,14 +3,14 @@ title: "BFS - Graph Algorithm"
 date: "2021-04-27T20:33:02.284Z"
 template: "post"
 draft: false
-slug: ""
+slug: "bfs"
 category: "Algorithm"
 tags:
   - "Graph"
   - "Algorithm"
   - "BFS"
   - "Python"
-description: BFS with python"
+description: "BFS with python"
 socialImage: ""
 ---
 

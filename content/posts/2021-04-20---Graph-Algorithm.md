@@ -3,14 +3,14 @@ title: "Graph Algorithm"
 date: "2021-04-20T21:09:02.284Z"
 template: "post"
 draft: false
-slug: ""
+slug: "graph"
 category: "Algorithm"
 tags:
   - "Graph"
   - "Algorithm"
   - "DFS"
   - "BFS"
-description: Graph
+description: "Graph"
 socialImage: ""
 ---
 

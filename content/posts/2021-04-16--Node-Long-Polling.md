@@ -1,9 +1,9 @@
 ---
-title: Node.js - Long Polling
+title: Long Polling - Node.js
 date: "2021-04-16T22:50:37.121Z"
 template: "post"
 draft: false
-slug: "the-origins-of-social-stationery-lettering"
+slug: "long-polling"
 category: "Development"
 tags:
   - "Node"

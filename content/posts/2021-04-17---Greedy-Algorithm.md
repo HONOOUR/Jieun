@@ -3,7 +3,7 @@ title: Greedy Algorithm
 date: "2021-04-17T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "a-brief-history-of-typography"
+slug: "greedy"
 category: "Algorithm"
 tags:
   - "Algorithm"

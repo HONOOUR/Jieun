@@ -3,7 +3,7 @@ title: Divide and Conquer Algorithm
 date: "2021-04-24T22:40:32.169Z"
 template: "post"
 draft: false
-slug: ""
+slug: "dvide-and-conquer"
 category: "Algorithm"
 tags:
   - "Algorithm"
