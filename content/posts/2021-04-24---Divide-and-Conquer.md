@@ -8,7 +8,7 @@ category: "Algorithm"
 tags:
   - "Algorithm"
   - "Divide and Conquer"
-  - "python"
+  - "Python"
 description: "Divide and Conquer with python"
 socialImage: ""
 ---
