@@ -46,7 +46,7 @@ For Gradle, you will need to add something like this:
 @ModelAttribute
 ```
 
-![signup](signup.jpg)
+![signup](/media/signup.jpg)
 
 ## Spring Validation
 

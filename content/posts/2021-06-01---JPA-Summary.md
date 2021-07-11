@@ -59,9 +59,9 @@ public void updateProfile(Account account, Profile profile) {
 }
 ```
 
-![entity_1.jpg](entity_1.jpg)
+![entity_1.jpg](/media/entity_1.jpg)
 
-![entity_2.jpg](entity_2.jpg)
+![entity_2.jpg](/media/entity_2.jpg)
 
 ## JPA (Java Persistence API)
 
@@ -82,9 +82,9 @@ public void updateProfile(Account account, Profile profile) {
 
 ## JPA
 
-![entity_3.jpg](entity_3.jpg)
+![entity_3.jpg](/media/entity_3.jpg)
 
-![entity_4.jpg](entity_4.jpg)
+![entity_4.jpg](/media/entity_4.jpg)
 
 ### Insert
 
@@ -92,7 +92,7 @@ public void updateProfile(Account account, Profile profile) {
 2. JPA → Entity 분석, 적절한 INSERT SQL 생성, JDBC API 사용, **패러다임의 불일치 해결**
 3. JPA → JDBC API 사용하여 DB에 저장
 
-![entity_5.jpg](entity_5.jpg)
+![entity_5.jpg](/media/entity_5.jpg)
 
 ### FIND
 
@@ -100,7 +100,7 @@ public void updateProfile(Account account, Profile profile) {
 2. JPA → 적절한 SELECT SQL 생성, JDBC API 사용, ResultSet 매핑, **패러다임의 불일치 해결**
 3. JPA → JDBC API 사용하여 DB에서 결과를 받아옴
 
-![entity_6.jpg](entity_6.jpg)
+![entity_6.jpg](/media/entity_6.jpg)
 
 ## JPA 표준
 

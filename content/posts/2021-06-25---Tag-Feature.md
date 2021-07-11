@@ -1,6 +1,6 @@
 ---
 title: "Tag feature - web project"
-date: "2021-06-20T21:14:02.284Z"
+date: "2021-06-25T21:14:02.284Z"
 template: "post"
 draft: false
 slug: "tag"
