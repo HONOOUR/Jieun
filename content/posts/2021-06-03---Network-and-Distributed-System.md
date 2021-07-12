@@ -3,7 +3,7 @@ title: "Network and Distributed System"
 date: "2021-06-01T20:14:02.284Z"
 template: "post"
 draft: false
-slug: "jpa-summary"
+slug: "network-distributed-system"
 category: "Development"
 tags:
   - "Java"

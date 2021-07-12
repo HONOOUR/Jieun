@@ -3,7 +3,7 @@ title: "Load Data - web project"
 date: "2021-06-29T21:20:55.284Z"
 template: "post"
 draft: false
-slug: "tag"
+slug: "load-data"
 category: "Development"
 tags:
   - "SpringBoot"
