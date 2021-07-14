@@ -18,12 +18,14 @@ I ❤️ being a professional software engineer (and traveling)
 #### Yogurt Studio
 
 _CRM solution for Pilates center_
-<br />Front end - React Native, Vue.js(team)
-<br />Back end - Java Spring Boot (team)
+<br />
+**기술 스택**: React Native, Vue.js(team), Java Spring Boot (team)
 
-#### PLACES
+#### Study Web Application
 
-_One-time Chatting Platform_
+_StudyOlle Clone Programming_
+<br />
+**기술 스택**: Javascript, Java Spring Boot, PostgreSQL
 
 ## Work Experience
 
@@ -33,4 +35,4 @@ work as an software engineer since 2018
 
 Windows programming (Desktop - C#, C++)
 <br />Web Front (react.js)
-<br />Server programming (C#, node.js)
+<br />Server programming (C#, Java-Spring boot, node.js)
