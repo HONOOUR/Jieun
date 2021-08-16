@@ -1,6 +1,6 @@
 ---
 title: "Form data with Model Attribute"
-date: "2021-06-20T22:10:10.284Z"
+date: "2021-07-10T22:10:10.284Z"
 template: "post"
 draft: false
 slug: "form-model-attribute"
@@ -47,7 +47,7 @@ public String updateProfileForm(@CurrentAccount Account account, Model model) {
 }
 ```
 
-### 3. Form 을 만들어줌
+### 3. Form 을 만들기
 
 th:action="@{/settings/profile}"
 
