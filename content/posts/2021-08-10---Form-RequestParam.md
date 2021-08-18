@@ -1,5 +1,5 @@
 ---
-title: "Form data with Model Attribute"
+title: "단일 데이터 in Spring MVC"
 date: "2021-08-10T22:10:10.284Z"
 template: "post"
 draft: false
@@ -9,7 +9,7 @@ tags:
   - "JAVA"
   - "Web MVC"
   - "Spring"
-description: "단일 데이터 주고 받기"
+description: "단일 데이터 주고 받기 with @RequestParam"
 socialImage: ""
 ---
 
