@@ -56,8 +56,6 @@ cookies can be sent along with other requests
 
 our website requires a randomly generated token as an HTTP parameter to our session cookie
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3a7dc217-fb49-4132-abd4-3d2a0a32cc7c/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3a7dc217-fb49-4132-abd4-3d2a0a32cc7c/Untitled.png)
+![create_test_code](/media/create_test_code.jpg)
 
 ### Cookies ??
-
-### MockMvc with Spring security feature
