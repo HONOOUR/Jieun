@@ -28,18 +28,17 @@ socialImage: ""
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
-				.mvcMatchers("/", "/login", "/sign-up", "/check-email-token",
-                        "/email-login", "/check-email-login", "/login-link").permitAll()
-        .mvcMatchers(HttpMethod.GET, "/profile/*").permitAll()
-        .anyRequest().authenticated();
-
-    http.formLogin()
-				.loginPage("/login").permitAll();
-		http.logout()
-        .logoutSuccessUrl("/");
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+	http.authorizeRequests()
+			.mvcMatchers("/", "/login", "/sign-up", "/check-email-token",
+                      "/email-login", "/check-email-login", "/login-link").permitAll()
+      .mvcMatchers(HttpMethod.GET, "/profile/*").permitAll()
+      .anyRequest().authenticated();
+  http.formLogin()
+			.loginPage("/login").permitAll();
+	http.logout()
+      .logoutSuccessUrl("/");
 }
 ```
 
@@ -113,14 +112,26 @@ http.rememberMe().key("랜덤한 키 값")
 
 ```java
 //SecurityConfig.java
-				http.rememberMe()
-                .userDetailsService(accountService)
-                .tokenRepository(tokenRepository());
+@Override
+protected void configure(HttpSecurity http) throwsException {
+    http.authorizeRequests()
+            .mvcMatchers("/", "/login", "/sign-up", "/check-email-token",
+                    "/email-login", "/login-by-email", "/login-link").permitAll()
+            .mvcMatchers(HttpMethod.GET, "/profile/*").permitAll()
+            .anyRequest().authenticated();
+    http.formLogin()
+            .loginPage("/login").permitAll();
+    http.logout()
+            .logoutSuccessUrl("/");
+    http.rememberMe()
+            .userDetailsService(accountService)
+            .tokenRepository(tokenRepository());
+}
 
-    private PersistentTokenRepository tokenRepository() {
-        JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
-        jdbcTokenRepository.setDataSource(dataSource);
-        return jdbcTokenRepository;
+private PersistentTokenRepository tokenRepository() {
+    JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
+    jdbcTokenRepository.setDataSource(dataSource);
+    return jdbcTokenRepository;
 ```
 
 @Entity 맵핑으로 생성
