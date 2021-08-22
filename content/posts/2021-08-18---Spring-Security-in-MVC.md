@@ -3,7 +3,7 @@ title: "Spring Security in MVC"
 date: "2021-08-18T22:10:10.284Z"
 template: "post"
 draft: false
-slug: "form-requestparam"
+slug: "spring-security-mvc"
 category: "Development"
 tags:
   - "JAVA"

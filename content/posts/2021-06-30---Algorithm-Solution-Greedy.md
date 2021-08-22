@@ -4,7 +4,7 @@ date: "2021-06-30T21:12:55.284Z"
 template: "post"
 draft: false
 slug: "solution-greedy-1"
-category: "Development"
+category: "Algorithm"
 tags:
   - "Algorithm"
   - "Greedy"
