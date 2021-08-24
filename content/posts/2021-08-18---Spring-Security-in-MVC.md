@@ -25,7 +25,7 @@ login → mainController → CurrentUser - Annotation → UserAccount
 - where Spring Security stores the details of who is authenticated.
 - a heart of Spring Security's authentication model
 
-  ![spring-security](/media/spring-security.jpg)
+  ![spring-security](/media/spring_security.jpg)
 
 1. 빈 SecurityContext 만든다
 
