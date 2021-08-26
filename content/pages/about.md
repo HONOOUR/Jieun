@@ -29,7 +29,7 @@ _StudyOlle Clone Programming_
 
 ## Work Experience
 
-work as an software engineer since 2018
+work as a software engineer since 2018
 
 ## Skills
 
