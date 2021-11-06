@@ -1,86 +1,122 @@
 ---
-title: "Using Websocket"
+title: "WebSocket Server - Client "
 date: "2021-10-20T15:10:10.284Z"
 template: "post"
 draft: false
-slug: "websocket"
+slug: "websocket-server-client"
 category: "Development"
 tags:
   - "WebSocket"
   - "Spring Boot"
   - "STOMP"
-description: "using websocket or stomp"
+description: "websocket server - client"
 socialImage: ""
 ---
 
-[https://spring.io/guides/gs/messaging-stomp-websocket/](https://spring.io/guides/gs/messaging-stomp-websocket/)
+1. 채팅방 만들고 ChatRoom Entity 리턴
 
-[https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/websocket.html](https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/websocket.html)
+   만들어진 각 ChatRoom 은 고유 room id 를 가짐
 
-## Use WebSocket
+2. WebSocket Client 를 사용해 WebSocket(ChatMessage) Server에 전달
 
-[https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/websocket.html](https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/websocket.html)
+   ChatMessage - type(ENTER, TALK) & roomId & message를 json 형태 web socket 으로 전달
 
-- where the client and server need to exchange events at high frequency and with low latency
-- when low latency and high frequency are crucial
-- Web socket API is too low level (prefer to use STOMP)
+   그 session을 roomId 를 키로 가지는 해쉬값에 추가해 같은 채팅방에 입장한 모든 세션에 메시지를 전달함
 
-## HTML5 Web Socket
+### Create ChatRoom
 
-- create a new web socket instance (specification ws:// wss://
-- provide it with the URL
-- connection during the initial handshake between the client and the server (underlying TCP/IP)
-
-![websocket_flow](/media/websocket_flow.jpg)
-
-## STOMP (Simple Text Orientated Messaging Protocol)
-
-- a simple, messaging protocol originally created for use in scripting languages with frames inspired by HTTP.
-- to address a subset of commonly used messaging patterns
-- used over any reliable 2-way streaming network protocol (TCP and WebSocket)
-- provide a richer programming model as a sub-protocol
-- No need to invent a custom messaging protocol and message format.
-- STOMP clients are available including a [Java client](https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/websocket.html#websocket-stomp-client) in the Spring Framework.
-- Message brokers such as RabbitMQ, ActiveMQ, and others can be used (optionally) to manage subscriptions and broadcast messages.
-- Application logic can be organized in any number of `@Controller`'s and messages routed to them based on the STOMP destination header vs handling raw WebSocket messages with a single `WebSocketHandler` for a given connection.
-- Use Spring Security to secure messages based on STOMP destinations and message types.
-- structure
-
-```
-COMMAND
-header1:value1
-header2:value2
-
-Body^@
-```
-
-### Enable STOMP
+Post Request by ChatController returns ChatRoom Entity
 
 ```java
-import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
-import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
+// ChatController
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/chat")
+public class ChatController {
 
-@Configuration@EnableWebSocketMessageBrokerpublicclass WebSocketConfigimplements WebSocketMessageBrokerConfigurer {
+    private final ChatService chatService;
 
-@Overridepublicvoid registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/portfolio").withSockJS();
-    }
-
-@Overridepublicvoid configureMessageBroker(MessageBrokerRegistry config) {
-        config.setApplicationDestinationPrefixes("/app");
-        config.enableSimpleBroker("/topic", "/queue");
+    @PostMapping
+    public ChatRoom createRoom(@RequestParam String name) {
+        return chatService.createRoom(name);
     }
 }
 ```
 
-### FLOW
+```java
+// ChatServie
+public ChatRoom createRoom(String name) {
+		String randomId = UUID.randomUUID().toString();
+    ChatRoom chatRoom = ChatRoom.builder()
+    .roomId(randomId)
+    .name(name)
+    .build();
+		return chatRoom
+}
+```
 
-![flow1](/media/socket_flow1.jpg)
+Postman 으로 테스트
 
-with external broker (RabbitMQ)
+![postman](/media/postman.jpg)
 
-![flow2](/media/socket_flow2.jpg)
+### Websocket Client ↔ Server
 
-텍스트 기반 메시지 프로토콜
+WebSocket Handler handles client session and websocket
 
-[https://docs.spring.io/spring-integration/reference/html/stomp.html](https://docs.spring.io/spring-integration/reference/html/stomp.html)
+```java
+// WebSocketHanler
+@Slf4j
+@Component
+@RequiredArgsConstructor
+public class WebSocketHandler extends TextWebSocketHandler {
+
+    private final ObjectMapper objectMapper;
+    private final ChatService chatService;
+
+    @Override
+    protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+        String payload = message.getPayload();
+        log.info("payload {}", payload);
+        ChatMessage chatMessage = objectMapper.readValue(payload, ChatMessage.class);
+        chatService.handleAction(chatMessage, session);
+    }
+}
+```
+
+```java
+// ChatService
+    // Type: Enter -> chatroom(key), sessions(value) 로 chatRoomToSession 해쉬맵에 추가 한다.
+    // Type: Talk -> chatMessage에 roomId로 chatroom을 찾고, chatRoom roomId를 키 값으로 갖는 value에 해당하는 모든 세션에 메시지를 발송함
+    public void handleAction(ChatMessage chatMessage, WebSocketSession session) {
+        MessageType type = chatMessage.getMessageType();
+        String roomId = chatMessage.getRoomId();
+        if (type == MessageType.ENTER) {
+            if (roomIdToSession.get(roomId) != null) {
+                HashSet<WebSocketSession> sessions = roomIdToSession.get(roomId);
+                sessions.add(session);
+                roomIdToSession.put(roomId, sessions);
+            } else {
+                HashSet<WebSocketSession> sessions = new HashSet<>();
+                sessions.add(session);
+                roomIdToSession.put(roomId, sessions);
+            }
+            chatMessage.setMessage("님이 입장했습니다.");
+        }
+        HashSet<WebSocketSession> sessions = roomIdToSession.get(roomId);
+        for (WebSocketSession s: sessions) {
+            sendMessage(s, chatMessage);
+        }
+    }
+```
+
+WebSocketClient 로 테스트
+
+[https://chrome.google.com/webstore/search/websocket](https://chrome.google.com/webstore/search/websocket)
+
+![socket_client](/media/socket_client.jpg)
+
+![socket_client_1](/media/socket_client_1.jpg)
+
+### Reference
+
+[https://daddyprogrammer.org/post/4077/spring-websocket-chatting/](https://daddyprogrammer.org/post/4077/spring-websocket-chatting/)
