@@ -1,11 +1,12 @@
 ---
-title: "SQL Statement Fundamentals"
+title: "SQL GOUP BY"
 date: "2022-03-11T22:20:10.284Z"
 template: "post"
 draft: false
-slug: "sql-fundamentals"
+slug: "sql-group-by"
 category: "Development"
 tags:
+  - "SQL"
   - "Postgre"
   - "Statements"
 description: "retrieve information from a table with statements"

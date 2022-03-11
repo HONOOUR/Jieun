@@ -6,6 +6,7 @@ draft: false
 slug: "sql-fundamentals"
 category: "Development"
 tags:
+  - "SQL"
   - "Postgre"
   - "Statements"
 description: "retrieve information from a table with statements"
