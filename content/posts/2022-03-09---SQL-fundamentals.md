@@ -1,6 +1,6 @@
 ---
 title: "SQL Statement Fundamentals"
-date: "2022-01-16T22:10:10.284Z"
+date: "2022-03-09T22:21:10.284Z"
 template: "post"
 draft: false
 slug: "sql-fundamentals"

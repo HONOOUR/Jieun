@@ -3,7 +3,7 @@ title: "IoC Container"
 date: "2022-01-28T22:10:10.284Z"
 template: "post"
 draft: false
-slug: "ioc-containe"
+slug: "ioc-container"
 category: "Development"
 tags:
   - "Spring Boot"
