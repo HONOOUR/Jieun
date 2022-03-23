@@ -9,7 +9,7 @@ tags:
   - "SQL"
   - "Postgre"
   - "Statements"
-description: "retrieve information from a table with statements"
+description: "Allows us to aggregate columns per some category"
 socialImage: ""
 ---
 ## GROUP BY
