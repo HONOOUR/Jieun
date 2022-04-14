@@ -9,7 +9,7 @@ tags:
   - "SQL"
   - "Postgre"
   - "Statements"
-description: "Allows us to aggregate columns per some category"
+description: "rAllows us to aggregate columns per some category"
 socialImage: ""
 ---
 ## GROUP BY
