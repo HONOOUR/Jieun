@@ -8,132 +8,65 @@ category: "Development"
 tags:
   - "Spring Boot"
   - "IoC"
-description: "publish and subscribe message with redis"
+description: "inversion of control and IoC in Spring"
 socialImage: ""
 ---
 
-![chatting](/media/chatting.jpg)
+## Inversion of control
 
-채팅시작 → return room view
+- library 와 구분하는 framework 특징 중 하나
+    
+    *[inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control)*
+    : In a framework, unlike in libraries or in standard user applications, the overall program's [flow of control](https://en.wikipedia.org/wiki/Control_flow) is not dictated by the caller, but by the framework.
+    
+    [https://en.wikipedia.org/wiki/Software_framework](https://en.wikipedia.org/wiki/Software_framework)
+    
 
-채팅 방 개설 또는 입장
+A 인스턴스에서 B 인스턴스를 생성해서 사용하는것이 아니라 
 
-채팅 방 개설 (chat/room/{room_name}
+제어권을 C 인스턴스에 위임하여 B를 생성하고,  A 인스턴스는 이미 생성한 B를 주입받아 사용하는 형태
 
-```jsx
-// room.ftl
-createRoom: function() {
-	var params = new URLSearchParams();
-	axios.post('/chat/room', params)
-```
+## IoC in Spring
 
-```java
-// ChatController.java
-@PostMapping("/room")
-@ResponseBody
-public ChatRoom createRoom(@RequestParam String name) {
-    return chatService.createRoom(name);
-}
-```
+### ****Spring IoC container and beans****
 
-채팅 방 입장 (chat/room/enter/{room_id} → return roomdetail view
+Objects define dependencies, constructor arguments, arguments to a factory method, properties on the object instance(after it is constructed or returned from a factory method)
 
-- Login 한 유저 정보로 token 생성
-- 유저가 입장한 채팅방에 들어오는 메시지를 계속 수신하고 있음
-- 유저가 입장한 내용을 입장한 채팅방에 발신, 이 때 생성한 토큰값 전달하여 유저 정보를 확인할 수 있도록 함
+The container injects those dependencies when it creates the bean.
 
-```jsx
-axios.get('/chat/user').then(response => {
-    _this.token = response.data.token;
-    ws.connect({"token":_this.token}, function(frame) {
-				// 채팅방에 들어오는 메시지를 계속 수신
-		    ws.subscribe("/subscribe/chat/room/" + _this.roomId, function(message) {
-		    var recv = JSON.parse(message.body);
-        _this.recvMessage(recv);
-        });
-				// 유저가 입장한 내용을 입장한 채팅방에 발신
-        _this.**sendMessage**('ENTER');
-    }
-```
+![ioc](/media/ioc.jpg)
 
-```jsx
-// 생성한 토큰값 전달하여 유저 정보를 확인
-sendMessage: function(type) {
-    ws.send("/publish/chat/message", {"token":this.token}, JSON.stringify({messageType:type, roomId:this.roomId, sender:this.sender, message:this.message}));
-    this.message = '';
-},
-```
+Bean : IoC 컨테이너에서 관리하는 객체
 
-채팅 방 메시지 발신 (chat/message)
+IoC : 빈을 생성 관리(필요시 다른객체에 주입) 관리
 
-- Publisher : 같은 주제를 구독하고 있는 구독자에 메시지를 publish
-- 입장 했을 때 호출
-- 메시지 전송 버튼 누를 때 호출
-
-```jsx
-// publisher
-    @MessageMapping("/chat/message")
-    public void sendMessage(ChatMessage chatMessage, @Header("token") String token) {
-        String nickname = jwtTokenProvider.getUserNameFromJwt(token);
-        chatMessage.setSender(nickname);
-        if (chatMessage.getMessageType().equals(MessageType.ENTER)) {
-            chatMessage.setMessage(nickname + " 님이 입장하셨습니다.");
-        }
-        **redisTemplate.convertAndSend(channelTopic.getTopic(), chatMessage);**
-    }
-```
-
-채팅 방 메시지 수신 (←**redisTemplate.convertAndSend(channelTopic.getTopic(), chatMessage**)
-
-- Subscribe : 메시지를 받으면 처리함
-- 메시지를 수신하고 있는 채팅방에 전송하는 역할을 빈으로 등록 (+ RedisSubscriber 객체)
-
-```jsx
-class RedisConfig {
-// ...
-		@Bean
-    public MessageListenerAdapter listenerAdapter(RedisSubscriber subscriber) {
-        return new MessageListenerAdapter(subscriber, "sendMessage");
-    }
-//...
-}
-```
-
-```java
-public class RedisSubscriber {
-// ...
-	public void sendMessage(String publishMessage) {
-    try {
-      ChatMessage chatMessage = objectMapper.readValue(publishMessage, ChatMessage.class);
-	    messageSendingOperations.convertAndSend("/subscribe/chat/room/" + chatMessage.getRoomId(), chatMessage);
-    } catch (Exception e) {
-	  log.error("Exception {}", e);
-	}
-}
-```
-
-```jsx
-created() {
-            this.roomId = localStorage.getItem('wschat.roomId');
-            this.sender = localStorage.getItem('wschat.sender');
-            this.findRoom();
-            var _this = this;
-            axios.get('/chat/user').then(response => {
-                _this.token = response.data.token;
-                ws.connect({"token":_this.token}, function(frame) {
-                    ws.subscribe(" /subscribe/chat/room/" + _this.roomId, function(message) {
-                        var recv = JSON.parse(message.body);
-                        _this.recvMessage(recv);
-                    });
-                    _this.sendMessage('ENTER');
-                }, function (error) {
-                    alert("서버 연결에 실패했습니다. 다시 접속해 주세요.");
-                    location.href="/chat/room";
-                });
-            });
-        },
-```
+한번 생성한 객체(인스턴스) 하나를 애플리케이션 전반에서 계속 사용하도록함 (재생성 없이) → singleton  scope
 
 ### Reference
 
-[https://daddyprogrammer.org/post/5072/spring-websocket-chatting-server-spring-security-jwt/](https://daddyprogrammer.org/post/5072/spring-websocket-chatting-server-spring-security-jwt/)
+[https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html)
+
+****5.5.1 The singleton scope****
+
+you define a bean definition and it is scoped as a singleton, the Spring IoC container creates *exactly one*
+ instance of the object defined by that bean definition. This single instance is stored in a cache of such singleton beans, and *all subsequent requests and references*
+ for that named bean return the cached object.
+
+Spring's concept of a singleton bean differs from the Singleton pattern as defined in the Gang of Four (GoF) patterns book. The GoF Singleton hard-codes the scope of an object such that one *and only one*
+ instance of a particular class is created *per `ClassLoader`*
+. The scope of the Spring singleton is best described as *per container and per bean.*
+
+****5.4.1 Dependency injection****
+
+*Dependency injection* (DI) is a process whereby objects define their dependencies, that is, the other objects they work with, only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. The container then *injects* those dependencies when it creates the bean. This process is fundamentally the inverse, hence the name *Inversion of Control* (IoC), of the bean itself controlling the instantiation or location of its dependencies on its own by using direct construction of classes, or the *Service Locator* pattern.
+
+Code is cleaner with the DI principle and decoupling is more effective when objects are provided with their dependencies. The object does not look up its dependencies, and does not know the location or class of the dependencies. As such, your classes become easier to test, in particular when the dependencies are on interfaces or abstract base classes, which allow for stub or mock implementations to be used in unit tests.
+
+DI exists in two major variants, [Constructor-based dependency injection](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html#beans-constructor-injection) and [Setter-based dependency injection](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html#beans-setter-injection).
+
+This chapter covers the Spring Framework implementation of the Inversion of Control (IoC) [[1]](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html#ftn.d5e1144)
+principle. IoC is also known as *dependency injection*
+ (DI). It is a process whereby objects define their dependencies, that is, the other objects they work with, only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. The container then *injects*
+ those dependencies when it creates the bean. This process is fundamentally the inverse, hence the name *Inversion of Control*
+ (IoC), of the bean itself controlling the instantiation or location of its dependencies by using direct construction of classes, or a mechanism such as the *Service Locator*
+ pattern.
