@@ -1,6 +1,6 @@
 ---
 title: "REST Architectural Elements"
-date: "2022-04-017T22:20:10.284Z"
+date: "2022-04-16T22:20:10.284Z"
 template: "post"
 draft: false
 slug: "rest"
@@ -54,14 +54,11 @@ Table 1: REST Data Elements
 
 | Data Element | Modern Web Examples |
 | --- | --- |
-| resource  | the intended conceptual target of a
-hypertext reference |
+| resource  | the intended conceptual target of a hypertext reference |
 | resource identifier | identifier URL, URN |
 | representation  | HTML document, JPEG image |
-| representation
-metadata | media type, last-modified time |
-| resource 
-metadata  | source link, alternates, vary |
+| representation metadata | media type, last-modified time |
+| resource metadata  | source link, alternates, vary |
 | control data  | if-modified-since, cache-control |
 
 **Resources and Resource Identifiers**
@@ -99,7 +96,63 @@ Each request contains all of the information necessary for a connector to unders
 4. forces all of the information that might factor into the reusability of a cached response to be present in each request
 application-level protocol
 
-generic, stateless, protocol for hypertext
+**Connector Types**
+
+1. Client and Server
+    
+    e.g. client - libwww, libwww-perl / server- libwww, Apache API, NSAPI
+    
+    Client initiates communication by making a request, Server listens for connections and responds to requests
+    
+2. Cache
+    
+    e.g. browser cache, Akamai cache network
+    
+    located on the interface to a client or server connector in order to save cacheable responses to current interactions (server to avoid repeating the process of generating responses, reducing latency)
+    
+    A response indicates if the cache should not be shared 
+    
+3. Resolver
+    
+    e.g. bind (DNS lookup library)
+    
+    translates partial or complete resource identifiers into network address information needed to establish an inter-component connection
+    
+    URI includes DNS hostname
+    
+    Web browser extracts the hostname from URI and make use of a DNS resolver to obtain the Internet Protocol address for that authority
+    
+4. Tunnel
+    
+    e.g. SOCKS, SSL after HTTP CONNECT
+    
+    relays communication across a connection boundary (e.g. firewall or lower-level network gateway)
+    
+    HTTP proxy that switches to a tunnel in response to a CONNECT method request, allowing its client to directly communicate with a remote server using a different protocol, such as TLS
+    
+
+## REST Architectural views
+
+*how elements work together*
+
+### Process View
+
+- the path of data flow
+- Services are implemented using a complex hierarchy of intermediaries and multiple distributed origin servers
+- Each interaction to be independent of others → stateless
+- Components act as either destination or intermediaries
+
+![process_view](/media/process_view.jpg)
+
+### Connector View
+
+- a view on mechanics of the communication between components
+- examine resource identifier in order to select an appropriate communication mechanism for each request (specific proxy)
+
+### Data View
+
+- information flows through the components
+- component interactions occur in the form of dynamically sized message ( request semantics e.g. GET)
 
 ***References***
 
