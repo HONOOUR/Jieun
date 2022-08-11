@@ -9,7 +9,7 @@ tags:
   - "Java"
   - "Querydsl"
   - "CloudFormation"
-description: "Pageable 적용하기 with querydsl"
+description: "Pageable 적용 with querydsl"
 socialImage: ""
 ---
 

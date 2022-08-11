@@ -6,7 +6,7 @@ socialImage: "/media/image-2.jpg"
 
 ## Jieun
 
-I ❤️ being a professional software engineer (and traveling)
+I ❤️ being a professional software engineer
 
 [\*https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8405631](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8405631) (Being a Software Developer)
 
