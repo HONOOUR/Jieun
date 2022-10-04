@@ -4,8 +4,8 @@
   "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
   "main": "n/a",
   "scripts": {
-    "develop": "yarn clean && gatsby develop",
-    "build": "yarn clean && gatsby build",
+    "develop": "yarn clean && gatsby develop && cp ./node_modules/gatsby-page-utils/dist/apply-trailing-slash-option.js ./node_modules/gatsby-page-utils",
+    "build": "yarn clean && gatsby build && cp ./node_modules/gatsby-page-utils/dist/apply-trailing-slash-option.js ./node_modules/gatsby-page-utils",
     "deploy": "yarn clean && gatsby build --prefix-paths && gh-pages -d public",
     "clean": "rimraf .cache public",
     "flow": "flow",
