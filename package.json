@@ -7,7 +7,7 @@
     "develop": "yarn clean && gatsby develop && cp ./node_modules/gatsby-page-utils/dist/apply-trailing-slash-option.js ./node_modules/gatsby-page-utils",
     "build": "yarn clean && gatsby build && cp ./node_modules/gatsby-page-utils/dist/apply-trailing-slash-option.js ./node_modules/gatsby-page-utils",
     "deploy": "yarn clean && gatsby build --prefix-paths && gh-pages -d public",
-    "run": "yarn clean && gatsby build && cp ./node_modules/gatsby-page-utils/dist/apply-trailing-slash-option.js ./node_modules/gatsby-page-utils"
+    "run": "yarn clean && gatsby build && cp ./node_modules/gatsby-page-utils/dist/apply-trailing-slash-option.js ./node_modules/gatsby-page-utils",
     "clean": "rimraf .cache public",
     "flow": "flow",
     "lint:js": "eslint --cache --ext .js,.jsx .",
