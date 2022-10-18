@@ -45,7 +45,7 @@
     "classnames": "^2.3.1",
     "codecov": "^3.8.1",
     "gatsby": "^2.32.12",
-    "gatsby-link": "^4.22.0",
+    "gatsby-link": "^4.24.1",
     "gatsby-page-utils": "^2.24.0",
     "gatsby-plugin-catch-links": "^2.10.0",
     "gatsby-plugin-feed": "^2.13.1",
