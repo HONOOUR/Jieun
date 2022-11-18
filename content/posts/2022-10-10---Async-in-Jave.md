@@ -60,8 +60,8 @@ public class AsyncMethodApplication {
 
 [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/EnableAsync.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/EnableAsync.html)
 
-Spring will be searching for an associated thread pool definition: either a unique `[TaskExecutor](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/task/TaskExecutor.html)`
- bean in the context, or an `[Executor](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true)` bean named "taskExecutor" otherwise.
+Spring will be searching for an associated thread pool definition: either a unique TaskExecutor
+ bean in the context, or an Executor bean named "taskExecutor" otherwise.
 
 ## 동시성 in Clean Code
 
