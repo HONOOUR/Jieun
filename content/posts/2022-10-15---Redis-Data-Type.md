@@ -61,5 +61,7 @@ mapping data to hashes
 ## Reference
 
 [https://developer.redis.com/howtos/chatapp/](https://developer.redis.com/howtos/chatapp/)
-
 채팅에서 방과 유저 아이디를 사용해서 키를 만들어 해쉬 데이터 타입을 사용하는 방법
+
+[https://stackabuse.com/spring-boot-with-redis-hashoperations-crud-functionality/](https://stackabuse.com/spring-boot-with-redis-hashoperations-crud-functionality/)
+HashOperations 사용하기
