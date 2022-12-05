@@ -8,7 +8,7 @@ category: "Development"
 tags:
   - "SpringBootTest"
   - "SpringBoot"
-  - "MockitoExtension"
+  - "mockito"
 description: "build time out in spring boot test"
 socialImage: ""
 ---
@@ -36,13 +36,57 @@ Annotation that can be specified on a test class that runs Spring Boot based tes
 - Allows application arguments to be defined using the [args attribute](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html#args--).
 - Provides support for different [webEnvironment](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html#webEnvironment--) modes, including the ability to start a fully running web server listening on a [defined](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.WebEnvironment.html#DEFINED_PORT) or [random](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.WebEnvironment.html#RANDOM_PORT) port.
 
+<br/>
+
 ## @ExtendWith(MockitoExtension.class)
 
 Developers can register one or more extensions *declaratively* by annotating a test interface, test class, test method, or custom *[composed annotation](https://junit.org/junit5/docs/current/user-guide/#writing-tests-meta-annotations)* with `@ExtendWith(…)` and supplying class references for the extensions to register.
 
 Extension that initializes mocks and handles strict stubbings. This extension is the JUnit Jupiter equivalent of our JUnit4 `MockitoJUnitRunner`
 
- 
+<br/>
+
+## Unit Test Example
+
+### @Mock
+
+mock injection + void method
+
+```java
+@ExtendWith(MockitoExtension.class)
+@DisplayName("EventService Test")
+public class EventServiceTest {
+
+	@Mock
+  EventRepository eventRepository;
+
+	@Test
+	void set_event_success() {
+		...
+		doNothing().when(eventRepository).enqueueEvent(event);
+		...
+	}
+}
+```
+
+mock injection + T method
+
+```java
+@ExtendWith(MockitoExtension.class)
+@DisplayName("EventService Test")
+public class EventServiceTest {
+
+	@Mock
+  EventRepository eventRepository;
+
+	@Test
+	void set_event_success() {
+		...
+		when(eventRepository.getEvents()).thenReturn(List.of(EventVo));
+		...
+	}
+}
+``` 
 
 ### Reference
 
