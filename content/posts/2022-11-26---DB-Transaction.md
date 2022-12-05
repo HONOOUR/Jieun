@@ -92,7 +92,7 @@ transaction A, B
     - Repeatable read - transaction A
         
         복수 쿼리 실행 사이 다른 트랜잭션 커밋이 있어도 반영되지 않음  
-        ![db-7-1.jpg](/media/db-7-1.jpg.jpg)
+        ![db-7-1.jpg](/media/db-7-1.jpg)
         
     - Read committed - transaction B
     복수 쿼리 실행 사이 다른 트랜잭션 커밋이 있다면 최신 커밋된 데이터를 읽음
