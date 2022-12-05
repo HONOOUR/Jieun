@@ -8,7 +8,7 @@ category: "Development"
 tags:
   - "DB"
   - "transaction"
-  - ""
+  - "isolation level"
 description: "테이블 갱신은 복수 쿼리를 연속적으로 수행하는 경우가 대부분이고 트랜잭션과 잠금이 필요하다."
 socialImage: ""
 ---
