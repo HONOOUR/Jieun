@@ -66,16 +66,16 @@ public class UserAccount extends User {
 
 **Authentication**
 
-The `[Authentication](https://docs.spring.io/spring-security/site/docs/5.5.2/api/org/springframework/security/core/Authentication.html)` serves two main purposes within Spring Security:
+The [Authentication](https://docs.spring.io/spring-security/site/docs/5.5.2/api/org/springframework/security/core/Authentication.html) serves two main purposes within Spring Security:
 
-- An input to `[AuthenticationManager](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication-authenticationmanager)` to provide the credentials a user has provided to authenticate. When used in this scenario, `isAuthenticated()` returns `false`.
+- An input to [AuthenticationManager](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication-authenticationmanager) to provide the credentials a user has provided to authenticate. When used in this scenario, `isAuthenticated()` returns `false`.
 - Represents the currently authenticated user. The current `Authentication` can be obtained from the [SecurityContext](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication-securitycontext).
 
 The `Authentication` contains:
 
-- `principal` - identifies the user. When authenticating with a username/password this is often an instance of `[UserDetails](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication-userdetails)`.
+- `principal` - identifies the user. When authenticating with a username/password this is often an instance of [UserDetails](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication-userdetails).
 - `credentials` - Often a password. In many cases this will be cleared after the user is authenticated to ensure it is not leaked.
-- `authorities` - the `[GrantedAuthority`s](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication-granted-authority) are high level permissions the user is granted. A few examples are roles or scopes.
+- `authorities` - the [GrantedAuthority`s](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication-granted-authority) are high level permissions the user is granted. A few examples are roles or scopes.
 
 [https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication-authentication](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication-authentication)
 
