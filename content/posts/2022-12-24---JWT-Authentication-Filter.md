@@ -24,8 +24,8 @@ socialImage: ""
 2. AbstractUserDetailsAuthenticationProvider 을 확장한 CustomAuthenticationProvider 생성
     1. AuthenticationProvider은 AuthenticationManager + ProviderManager method
     2. retrieveUser(username, authentication) 함수를 재정의함
-        1. 전달받는 객체는 UsernamePasswordAuthenticationToken(authentication type)으로 만듦
-        2. loadUserByUsernameAndDomain()을 호출해서 받은  UserDetails 객체를 반환
+        - 전달받는 객체는 UsernamePasswordAuthenticationToken(authentication type)으로 만듦
+        - loadUserByUsernameAndDomain()을 호출해서 받은  UserDetails 객체를 반환
 3. UsernamePasswordAuthenticationFilter 을 확장한 JwtAuthenticationFilter생성
     1. [https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/form.html#servlet-authentication-usernamepasswordauthenticationfilter](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/form.html#servlet-authentication-usernamepasswordauthenticationfilter)
     2. {username, password} 를 요청에서 얻음
@@ -130,3 +130,9 @@ authorization : access control (what are you allowed to do)
 ### Request Matching for Dispatch and Authorization
 
 - request matcher: decide whether to apply it to an HTTP request
+
+
+## Reference
+https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/basic.html#servlet-authentication-basic
+https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-filters-review
+https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/form.html#servlet-authentication-usernamepasswordauthenticationfilter
