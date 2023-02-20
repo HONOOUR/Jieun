@@ -35,7 +35,7 @@ module.exports = {
       github: 'HONOOUR',
       rss: '',
       vkontakte: '',
-      linkedin: '#',
+      linkedin: 'jieun-choi-0275ba136',
       instagram: '',
       line: '',
       gitlab: '',
