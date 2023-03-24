@@ -3,7 +3,7 @@ title: "RSA 서명 및 JWK 를 사용한 JWT 생성"
 date: "2023-02-21T20:50:10.284Z"
 template: "post"
 draft: false
-slug: "sso-google"
+slug: "jwt-jwk"
 category: "Development"
 tags:
   - "JWT"
