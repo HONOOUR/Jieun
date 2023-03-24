@@ -24,6 +24,13 @@ DEV, QA, Live 서버 구성 (AWS, Docker, K8s)
 - 룸 생성, 초대, 메시지 전송
 - 안읽은 메시지 수 확인 기능
 
+JWT를 활용한 인증/인가 시스템 구현 (Java - spring boot, mysql, redis)
+- RSA 비대칭 알고리즘을 사용하여 JWT 서명 구현
+- 비대칭키 JWK 형식으로 관리, 검증 구현
+
+SSO 지원 로그인 기능 구현
+- EPIC, Google sign in
+
 *Siemens Healthineers 2018.02 - 2022.05*
 New Logging Framework 개발 참여 (C#, C++/CLI with Apache log4net)
 - Documentation, Design, Component development(IPC remote logging)
