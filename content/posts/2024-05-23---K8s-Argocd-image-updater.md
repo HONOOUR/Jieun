@@ -1,9 +1,9 @@
 ---
-title: "K8s Argocd setup"
+title: "K8s Argocd Image Updater"
 date: "2024-05-23T20:50:10.284Z"
 template: "post"
 draft: false
-slug: "k8s-argocd"
+slug: "k8s-argocd-image-updater"
 category: "Development"
 tags:
   - "K8s"
